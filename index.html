@@ -327,7 +327,7 @@ function animate(id,target){
 }
 
 async function loadData() {
-    let response = await fetch("/data.json");
+    let response = await fetch("./data.json");
     
     if (!response.ok) {
         console.warn("Failed to render site, please contact the Welfort Information and Communication Agency.");
