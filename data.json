@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "licensed": 1,
+        "openInvestigations": 1,
+        "warningsCount": 2,
+        "registeredInstitutionsCount": 1,
+        "totalInvestigations": 2,
+        "consumerReports": 5,
+        "complianceReviews": 4
+    },
+    "warnings": [
+        {
+            "level": "high",
+            "title": "GoldmanCapitalBank",
+            "message": "Be advised: exit-scam, possibly ponzi scheme, money laundering, unregistered financial institution. FMA is taking enforcement action against them."
+        },
+        {
+            "level": "medium",
+            "title": "Elevated risk of financial fraud",
+            "message": "Always verify financial institutions before depositing funds. Unsure? Ask an FMA employee on the UK Discord Server, or open a DOC ticket to verify FI-status."
+        }
+    ]
+}
