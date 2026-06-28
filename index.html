@@ -1,376 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Financial Markets Authority of Welfort</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Markets Authority of Welfort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    body {
+        font-family:Inter,sans-serif;
+        background:#0f172a;
+        color:white;
+    }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    header {
+        background:linear-gradient(135deg,#0f172a,#1e3a8a);
+        padding:60px;
+    }
 
-body{
-    font-family:Inter,sans-serif;
-    background:#0f172a;
-    color:white;
-}
+    .container {
+        width:min(1200px,95%);
+        margin:auto;
+    }
 
-header{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-    padding:60px;
-}
+    nav {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:60px;
+    }
 
-.container{
-    width:min(1200px,95%);
-    margin:auto;
-}
+    .logo {
+        font-size:28px;
+        font-weight:700;
+    }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:60px;
-}
+    .logo span {
+        color:#60a5fa;
+    }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-}
+    .button {
+        background:#2563eb;
+        padding:12px 20px;
+        border-radius:8px;
+        text-decoration:none;
+        color:white;
+        font-weight:600;
+    }
 
-.logo span{
-    color:#60a5fa;
-}
+    .hero {
+        display:grid;
+        grid-template-columns:2fr 1fr;
+        gap:40px;
+    }
 
-.button{
-    background:#2563eb;
-    padding:12px 20px;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-}
+    .hero h1 {
+        font-size:50px;
+        margin-bottom:20px;
+    }
 
-.hero{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:40px;
-}
+    .hero p {
+        color:#cbd5e1;
+        line-height:1.7;
+    }
 
-.hero h1{
-    font-size:50px;
-    margin-bottom:20px;
-}
+    .card {
+        background:#1e293b;
+        border-radius:14px;
+        padding:25px;
+    }
 
-.hero p{
-    color:#cbd5e1;
-    line-height:1.7;
-}
+    section {
+        padding:60px 0;
+    }
 
-.card{
-    background:#1e293b;
-    border-radius:14px;
-    padding:25px;
-}
+    .grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:25px;
+    }
 
-section{
-    padding:60px 0;
-}
+    .metric {
+        text-align:center;
+    }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
+    .metric h2 {
+        color:#60a5fa;
+        font-size:42px;
+    }
 
-.metric{
-    text-align:center;
-}
+    .metric small {
+        color:#94a3b8;
+    }
 
-.metric h2{
-    color:#60a5fa;
-    font-size:42px;
-}
+    .warning {
+        background:#334155;
+        padding:16px;
+        border-radius:10px;
+        margin-top:15px;
+    }
 
-.metric small{
-    color:#94a3b8;
-}
+    .low {
+        border-left:5px solid #10b981;
+    }
 
-.warning{
-    background:#334155;
-    padding:16px;
-    border-radius:10px;
-    margin-top:15px;
-}
+    .medium {
+        border-left:5px solid orange;
+    }
 
-.low{
-    border-left:5px solid #10b981;
-}
+    .high {
+        border-left:5px solid #ef4444;
+    }
 
-.medium{
-    border-left:5px solid orange;
-}
+    input {
+        width:100%;
+        padding:12px;
+        margin-top:20px;
+        border:none;
+        border-radius:8px;
+    }
 
-.high{
-    border-left:5px solid #ef4444;
-}
+    footer {
+        padding:40px;
+        text-align:center;
+        color:#94a3b8;
+        background:#020617;
+    }
 
-input{
-    width:100%;
-    padding:12px;
-    margin-top:20px;
-    border:none;
-    border-radius:8px;
-}
+    .status {
+        display:inline-block;
+        width:12px;
+        height:12px;
+        border-radius:50%;
+        background:#22c55e;
+        animation:pulse 2s infinite;
+    }
 
-footer{
-    padding:40px;
-    text-align:center;
-    color:#94a3b8;
-    background:#020617;
-}
+    @keyframes pulse {
+    0%{opacity:1;}
+    50%{opacity:.3;}
+    100%{opacity:1;}
+    }
 
-.status{
-    display:inline-block;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#22c55e;
-    animation:pulse 2s infinite;
-}
+    .case-link {
+        display:block;
+        padding:16px;
+        margin-bottom:12px;
+        background:#1e293b;
+        border-radius:10px;
+        color:#93c5fd;
+        text-decoration:none;
+        transition:.2s;
+        border:1px solid transparent;
+    }
 
-@keyframes pulse{
-0%{opacity:1;}
-50%{opacity:.3;}
-100%{opacity:1;}
-}
-
-.clock{
-    font-size:15px;
-    color:#cbd5e1;
-    margin-top:15px;
-}
-</style>
-
+    .case-link:hover {
+        border-color:#2563eb;
+        background:#263548;
+    }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    FMA<span>.</span>Welfort
+                </div>
+
+                <a class="button" href="#">Working for the United Kingdom</a>
+            </nav>
+
+            <div class="hero">
+                <div>
+                    <h1>Financial Markets Authority of Welfort</h1>
+                    <p>The Financial Markets Authority (FMA) supervises financial markets, financial service providers and market conduct within the United Kingdom. Our objective is to promote integrity, transparency and confidence throughout the financial sector.</p>
+                    <br>
+
+                    <div>
+                        System Status:
+                        <span class="status"></span>
+                        Operational
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <h3>Current Supervisory Status</h3>
+                    <br>
+                    <p>Licensed institutions monitored</p>
+                    <h2 id="licensed">0</h2>
+                    <hr style="margin:20px 0;border-color:#334155;">
+                    <p>Open investigations</p>
+                    <h2 id="investigations">0</h2>
+                    <hr style="margin:20px 0;border-color:#334155;">
+                    <p>Public warnings</p>
+                    <h2 id="warningsCount">0</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Market Alerts</h2>
+            <input
+                type="text"
+                placeholder="Search warnings..."
+            id="search">
+
+            <div id="warnings"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 style="margin-bottom:30px;">Active Enforcement Actions</h2>
+            <div class="card">
+                <p style="color:#cbd5e1;margin-bottom:20px;">The Financial Markets Authority publishes active enforcement actions and court proceedings where disclosure is in the public interest.</p>
+                <div id="enforcementActions"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 style="margin-bottom:30px;">Regulatory Objectives</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Market Integrity</h3>
+                    <br>
+                    <p>Maintain fair, orderly and transparent financial markets.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Consumer Protection</h3>
+                    <br>
+                    <p>Protect consumers through supervision, enforcement and public guidance.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Financial Stability</h3>
+                    <br>
+                    <p>Promote confidence in the financial system for citizens of the United Kingdom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="grid">
+                <div class="metric">
+                    <h2 id="m1">0</h2>
+                    <small>Registered Institutions</small>
+                </div>
+
+                <div class="metric">
+                    <h2 id="m2">0</h2>
+                    <small>Investigations</small>
+                </div>
+
+                <div class="metric">
+                    <h2 id="m3">0</h2>
+                    <small>Consumer Reports</small>
+                </div>
 
-<header>
+                <div class="metric">
+                    <h2 id="m4">0</h2>
+                    <small>Compliance Reviews</small>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="container">
+    <footer>
+        Financial Markets Authority of Welfort<br>
+        Independent Financial Regulator
+    </footer>
 
-<nav>
+    <script>
 
-<div class="logo">
-FMA<span>.</span>Welfort
-</div>
+    function animate(id,target){
+        let value = 0;
+        let step = Math.ceil(target / 70);
 
-<a class="button" href="#">Working for the United Kingdom</a>
+        let timer = setInterval(()=>{
+            value += step;
 
-</nav>
+            if(value >= target){
+                value = target;
+                clearInterval(timer);
+            }
 
-<div class="hero">
+            document.getElementById(id).textContent = value;
+        }, 20);
+    }
 
-<div>
+    async function loadData() {
+        let response = await fetch("/fma/data.json");
+        
+        if (!response.ok) {
+            console.warn("Failed to render site, please contact the Welfort Information and Communication Agency.");
+        } else {
+            let data = await response.json();
+            let meta = data.meta;
 
-<h1>Financial Markets Authority of Welfort</h1>
+            animate("licensed", meta.licensed);
+            animate("investigations", meta.openInvestigations);
+            animate("warningsCount", meta.warningsCount);
+            animate("m1", meta.registeredInstitutionsCount);
+            animate("m2", meta.totalInvestigations);
+            animate("m3", meta.consumerReports);
+            animate("m4", meta.complianceReviews);
 
-<p>
-The Financial Markets Authority (FMA) supervises financial markets, financial service providers and market conduct within the United Kingdom. Our objective is to promote integrity, transparency and confidence throughout the financial sector.
-</p>
+            let warnings = data.warnings;
 
-<br>
+            for (const warning of warnings) {
+                const warningDiv = document.createElement("div");
+                warningDiv.className = `warning ${warning.level}`;
 
-<div>
-System Status:
-<span class="status"></span>
-Operational
-</div>
+                const strong = `<strong>${warning.level === "high" ? "Public Warning" : warning.level === "medium" ? "Consumer Notice" : warning.level === "low" ? "Information" : "Unknown Level"}: ${warning.title}</strong>`;
 
-</div>
+                const br = "<br>";
 
-<div class="card">
+                warningDiv.innerHTML = strong + br + warning.message;
 
-<h3>Current Supervisory Status</h3>
+                document.getElementById("warnings").appendChild(warningDiv);
+            }
 
-<br>
+            const actions = data.enforcementActions;
 
-<p>Licensed institutions monitored</p>
-<h2 id="licensed">0</h2>
+            for (const action of actions) {
+                const a = document.createElement("a");
 
-<hr style="margin:20px 0;border-color:#334155;">
+                a.href = action.url;
+                a.className = "case-link";
+                a.textContent = action.title;
 
-<p>Open investigations</p>
-<h2 id="investigations">0</h2>
-
-<hr style="margin:20px 0;border-color:#334155;">
-
-<p>Public warnings</p>
-<h2 id="warningsCount">0</h2>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-<section>
-
-<div class="container">
-
-<h2>Market Alerts</h2>
-
-<input
-type="text"
-placeholder="Search warnings..."
-id="search">
-
-<div id="warnings"></div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2 style="margin-bottom:30px;">Regulatory Objectives</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Market Integrity</h3>
-<br>
-<p>Maintain fair, orderly and transparent financial markets.</p>
-</div>
-
-<div class="card">
-<h3>Consumer Protection</h3>
-<br>
-<p>Protect consumers through supervision, enforcement and public guidance.</p>
-</div>
-
-<div class="card">
-<h3>Financial Stability</h3>
-<br>
-<p>Promote confidence in the financial system for citizens of the United Kingdom.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="grid">
-
-<div class="metric">
-<h2 id="m1">0</h2>
-<small>Registered Institutions</small>
-</div>
-
-<div class="metric">
-<h2 id="m2">0</h2>
-<small>Investigations</small>
-</div>
-
-<div class="metric">
-<h2 id="m3">0</h2>
-<small>Consumer Reports</small>
-</div>
-
-<div class="metric">
-<h2 id="m4">0</h2>
-<small>Compliance Reviews</small>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-Financial Markets Authority of Welfort<br>
-Independent Financial Regulator
-
-</footer>
-
-<script>
-
-function animate(id,target){
-    let value = 0;
-    let step = Math.ceil(target / 70);
-
-    let timer = setInterval(()=>{
-        value += step;
-
-        if(value >= target){
-            value = target;
-            clearInterval(timer);
-        }
-
-        document.getElementById(id).textContent = value;
-    }, 20);
-}
-
-async function loadData() {
-    let response = await fetch("./data.json");
-    
-    if (!response.ok) {
-        console.warn("Failed to render site, please contact the Welfort Information and Communication Agency.");
-    } else {
-        let data = await response.json();
-        let meta = data.meta;
-
-        animate("licensed", meta.licensed);
-        animate("investigations", meta.openInvestigations);
-        animate("warningsCount", meta.warningsCount);
-        animate("m1", meta.registeredInstitutionsCount);
-        animate("m2", meta.totalInvestigations);
-        animate("m3", meta.consumerReports);
-        animate("m4", meta.complianceReviews);
-
-        let warnings = data.warnings;
-
-        for (const warning of warnings) {
-            const warningDiv = document.createElement("div");
-            warningDiv.className = `warning ${warning.level}`;
-
-            const strong = `<strong>${warning.level === "high" ? "Public Warning" : warning.level === "medium" ? "Consumer Notice" : warning.level === "low" ? "Information" : "Unknown Level"}: ${warning.title}</strong>`;
-
-            const br = "<br>";
-
-            warningDiv.innerHTML = strong + br + warning.message;
-
-            document.getElementById("warnings").appendChild(warningDiv);
+                document.getElementById("enforcementActions").appendChild(a);
+            }
         }
     }
-}
 
-loadData();
+    loadData();
 
-document.getElementById("search").addEventListener("input", function() {
-    let value = this.value.toLowerCase();
+    document.getElementById("search").addEventListener("input", function() {
+        let value = this.value.toLowerCase();
 
-    document.querySelectorAll(".warning").forEach(w => {
-        w.style.display = w.innerText.toLowerCase().includes(value) ? "block" : "none";
+        document.querySelectorAll(".warning").forEach(w => {
+            w.style.display = w.innerText.toLowerCase().includes(value) ? "block" : "none";
+        });
     });
-});
 
-</script>
-
+    </script>
 </body>
 </html>
