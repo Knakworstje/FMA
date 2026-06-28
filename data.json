@@ -19,5 +19,11 @@
             "title": "Elevated risk of financial fraud",
             "message": "Always verify financial institutions before depositing funds. Unsure? Ask an FMA employee on the UK Discord Server, or open a DOC ticket to verify FI-status."
         }
+    ],
+    "enforcementActions": [
+        {
+            "title": "Case FMA-2026-001 — GoldmanCapitalBank.",
+            "url": "https://www.democracycraft.net/threads/desertstorm49-et-al-v-marseywpd-poktizoc-2026-fcr-55.39843"
+        }
     ]
 }
